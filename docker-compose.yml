@@ -1,0 +1,44 @@
+# docker-compose setup file for Metabase and Postgres containers
+version: '3.9'
+services:
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    hostname: metabase
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./source-data:/source-data
+    ports:
+      - "3000:3000"
+    networks:
+      - metabase-net
+    depends_on: 
+      - postgres-metabase
+
+  postgres-metabase:
+    image: postgres:latest
+    container_name: postgres-metabase
+    hostname: postgres-metabase
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./source-data:/source-data
+      - ./database-setup/sourcedb.sql:/docker-entrypoint-initdb.d/sourcedb.sql
+    ports: 
+      - "5434:5432"
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "metabasedb1"]
+      interval: 5s
+      retries: 5
+    restart: unless-stopped
+    networks: 
+      - metabase-net
+
+networks:
+  metabase-net:
+    driver: bridge

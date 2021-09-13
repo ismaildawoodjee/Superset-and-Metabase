@@ -2,6 +2,8 @@
 
 ## Supersetup
 
+Recommended to run on Linux OS with Docker and `docker-compose`.
+
 1. Clone the Apache Superset repo on GitHub
 
         git clone https://github.com/apache/superset.git; cd superset
@@ -55,3 +57,25 @@
 Connect to database with URI string:
 
         postgresql+psycopg2://superset:superset@db:5432/superset
+
+## Metabase Setup
+
+[One-liner](https://www.metabase.com/start/oss/) for Docker (not recommended):
+
+        docker run -d -p 3000:3000 --name metabase metabase/metabase
+
+[Custom setup](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) (modified)
+with a `docker-compose` file, including database container and secret files:
+
+        docker-compose up -d
+
+Connect to database from Metabase setup page with `hostname:port` = `postgres-metabase:5432`.
+Connect from external applications using `localhost:5434`.
+
+**NOTE:** Docker secrets don't work with `docker-compose`, they only work with Docker Swarm.
+Use an environment file `.env` instead.
+
+If containers keep exiting unexpectedly (usually when database connection credentials are invalid),
+check their logs with
+
+        docker logs [CONTAINER_NAME | CONTAINER_ID]

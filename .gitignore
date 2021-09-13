@@ -1,0 +1,6 @@
+.venv
+.vscode
+.metals
+__pycache__
+
+temp

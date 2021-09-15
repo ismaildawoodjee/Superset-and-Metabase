@@ -1,4 +1,4 @@
-# Superset
+# Superset and Metabase Evaluations
 
 ## Supersetup
 
@@ -51,6 +51,15 @@ Recommended to run on Linux OS with Docker and `docker-compose`.
     If `SUPERSET_LOAD_EXAMPLES` is set to `no`, running the Bash script will not
     load them. Otherwise, it will take ~30 min to load the examples.
 
+    Another way of fixing this is to directly run the Bash script without going inside the container:
+
+        docker exec -i superset_app bash /app/docker/docker-init.sh
+
+    Yet another way is by fixing it permanently. Modify the `superset-init` container in the
+    `docker-compose-non-dev.yml` file as follows:
+
+    ![picture](picture)
+
 5. Exit the container and go to `localhost:8088` and login with username and password
    `admin`.
 
@@ -79,3 +88,8 @@ If containers keep exiting unexpectedly (usually when database connection creden
 check their logs with
 
         docker logs [CONTAINER_NAME | CONTAINER_ID]
+
+## CSV, Excel, and Parquet Uploads
+
+### Superset
+

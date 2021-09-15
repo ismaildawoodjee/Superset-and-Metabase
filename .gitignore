@@ -3,6 +3,10 @@
 .metals
 __pycache__
 
+superset
+
 temp
 *.csv
 *.txt
+*.xlsx
+*.parquet

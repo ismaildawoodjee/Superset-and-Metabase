@@ -176,3 +176,29 @@ WHERE
 
 The SQL queries above are not allowed in the SQL Lab > SQL Editor page, unless the `Allow DML` option is ticked
 for that particular database.
+
+### Metabase
+
+## Drilldowns, Custom Visualizations, and Sharing
+
+### Superset
+
+Superset does not support drilldowns but they can be introduced via custom JavaScript code.
+There is currently a [draft pull request](https://github.com/apache/superset/pull/14688) in progress for
+adding drilldown functionality to Superset.
+
+[Custom plugins for visualizations](https://superset.apache.org/docs/installation/building-custom-viz-plugins)
+can be built using the React framework.
+
+Dashboards and charts can be shared via [email or URLs](https://docs.preset.io/docs/how-to-share). Public access
+to dashboards can be granted by providing `datasource access` permission to the `Public` role. For example, for
+the Sales Dashboard, the `Public` user must have `datasource access on [examples].[clean_sales_data]` in order
+for them to view the dashboard.
+
+Superset can also be hosted on the cloud, which I tried out [here](https://superset-hdash.herokuapp.com/), with
+the help of this [article](https://chizurumolorondu.medium.com/setting-up-apache-superset-on-heroku-b547302f600e)
+and this [repo](https://github.com/zi-nt/superset-on-heroku). The functionality is limited, since the Python installation
+of Superset doesn't allow uploads via Excel or Parquet, and the attached Postgres database on Heroku only allows
+10,000 rows max. A better option would be to host it on a cloud vendor web hosting service, or a container registry.
+
+### Metabase

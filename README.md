@@ -68,6 +68,8 @@ Connect to database with URI string:
 
 ## Metabase Setup
 
+Also recommended to run on Linux OS, facing some problems in Windows.
+
 [One-liner](https://www.metabase.com/start/oss/) for Docker (not recommended):
 
     docker run -d -p 3000:3000 --name metabase metabase/metabase
@@ -116,6 +118,20 @@ is undesirable in most cases. However, data types are preserved when uploading P
 For Excel files, there is an option to choose which sheet to upload.
 
 ### Metabase
+
+Metabase doesn't have a native way to import CSV files. Instead, the CSV has to be uploaded to a database
+and then Metabase can connect to that database. Direct imports from Excel and Parquet files are also not
+supported.
+
+Metabase is mainly for asking questions about data that is already in databases, and it
+is expected for the user to bring their own database to connect to.
+
+When adding a new database table, the table doesn't appear immediately unless the database schema is
+synced:
+
+![Metabase DB sync](assets/images/metabase_db_sync.png "Metabase DB sync")
+
+The sync can be scheduled hourly or daily.
 
 ## Report Scheduling, Logging, and Dashboard Refresh
 
@@ -179,6 +195,18 @@ for that particular database.
 
 ### Metabase
 
+[Pulses](https://www.metabase.com/docs/v0.40/users-guide/10-pulses.html), soon to be deprecated
+in favor of [Dashboard subscriptions](https://www.metabase.com/docs/v0.40/users-guide/dashboard-subscriptions.html) 
+can be set up to send Slack alerts and scheduled reports to emails, after setting up a Sender Email.
+Unlike Superset, Metabase provides a UI to set up this Sender Email for sending scheduled reports.
+
+Logs are recorded in `Settings > Admin > Troubleshooting > Logs`. A bit verbose though.
+These logs can also be viewed through `docker logs [CONTAINER_NAME]`.
+
+Like Superset, Metabase dashboards also support refresh intervals, and I tested this in a similar way as well.
+
+![Dashboard refresh](assets/images/metabase_dashboard_refresh.png "Dashboard refresh intervals")
+
 ## Drilldowns, Custom Visualizations, and Sharing
 
 ### Superset
@@ -202,3 +230,13 @@ of Superset doesn't allow uploads via Excel or Parquet, and the attached Postgre
 10,000 rows max. A better option would be to host it on a cloud vendor web hosting service, or a container registry.
 
 ### Metabase
+
+Drilldowns are supported in Metabase and [interactive dashboards](https://www.metabase.com/docs/latest/users-guide/interactive-dashboards.html)
+with customized drilldowns can also be created.
+
+Adding custom visualizations are [much harder to do in Metabase](https://github.com/metabase/metabase/issues/13889)
+and it does not have a custom plugin architecture like Superset.
+
+Dashboards can be [shared with public links](https://www.metabase.com/docs/latest/users-guide/07-dashboards.html#sharing-dashboards-with-public-links),
+and can be embedded into websites as well. Sender Email has to be set up first, and if using `TLS` encryption, choose
+`STARTTLS` instead. `Public Sharing` in `Settings > Admin > Public Sharing` has to be enabled as well.

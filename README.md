@@ -223,11 +223,13 @@ to dashboards can be granted by providing `datasource access` permission to the 
 the Sales Dashboard, the `Public` user must have `datasource access on [examples].[clean_sales_data]` in order
 for them to view the dashboard.
 
-Superset can also be hosted on the cloud, which I tried out [here](https://superset-hdash.herokuapp.com/), with
+Superset can also be hosted on the cloud, which I tried out [here](https://superset-hdash.herokuapp.com/superset/dashboard/1/?standalone=true), with
 the help of this [article](https://chizurumolorondu.medium.com/setting-up-apache-superset-on-heroku-b547302f600e)
 and this [repo](https://github.com/zi-nt/superset-on-heroku). The functionality is limited, since the Python installation
 of Superset doesn't allow uploads via Excel or Parquet, and the attached Postgres database on Heroku only allows
-10,000 rows max. A better option would be to host it on a cloud vendor web hosting service, or a container registry.
+10,000 rows max. The `Python Functions` subsection in the `Advanced Analytics` section also doesn't appear.
+
+A better option would be to host it on a cloud vendor web hosting service, or a container registry.
 
 ### Metabase
 
@@ -240,3 +242,5 @@ and it does not have a custom plugin architecture like Superset.
 Dashboards can be [shared with public links](https://www.metabase.com/docs/latest/users-guide/07-dashboards.html#sharing-dashboards-with-public-links),
 and can be embedded into websites as well. Sender Email has to be set up first, and if using `TLS` encryption, choose
 `STARTTLS` instead. `Public Sharing` in `Settings > Admin > Public Sharing` has to be enabled as well.
+
+[Running Metabase in production](https://www.metabase.com/blog/how-to-run-metabase-in-production/)

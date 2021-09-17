@@ -4,6 +4,11 @@ DROP TABLE IF EXISTS ecommerce.customers;
 DROP TABLE IF EXISTS ecommerce.orders;
 DROP TABLE IF EXISTS ecommerce.order_reviews;
 DROP TABLE IF EXISTS ecommerce.geolocation;
+DROP TABLE IF EXISTS ecommerce.order_items;
+DROP TABLE IF EXISTS ecommerce.order_payments;
+DROP TABLE IF EXISTS ecommerce.products;
+DROP TABLE IF EXISTS ecommerce.sellers;
+DROP TABLE IF EXISTS ecommerce.product_category_name_translation;
 
 CREATE TABLE ecommerce.customers (
     customer_id TEXT,
@@ -38,6 +43,43 @@ CREATE TABLE ecommerce.geolocation (
     geolocation_city TEXT,
     geolocation_state CHAR(2)
 );
+CREATE TABLE order_items (
+  order_id TEXT,
+  order_item_id INT,
+  product_id TEXT,
+  seller_id TEXT,
+  shipping_limit_date TIMESTAMP,
+  price NUMERIC,
+  freight_value NUMERIC
+);
+CREATE TABLE order_payments (
+  order_id TEXT,
+  payment_sequential INT,
+  payment_type TEXT,
+  payment_installments INT,
+  payment_value NUMERIC
+);
+CREATE TABLE products (
+  product_id TEXT,
+  product_category_name TEXT,
+  product_name_length INT,
+  product_description_length INT,
+  product_photos_qty INT,
+  product_weight_g INT,
+  product_length_cm INT,
+  product_height_cm INT,
+  product_width_cm INT
+);
+CREATE TABLE sellers (
+  seller_id TEXT,
+  seller_zip_code_prefix CHAR(5),
+  seller_city TEXT,
+  seller_state CHAR(2)
+);
+CREATE TABLE product_category_name_translation (
+  product_category_name TEXT,
+  product_category_name_english TEXT
+);
 
 COPY ecommerce.customers
 FROM
@@ -51,3 +93,18 @@ FROM
 COPY ecommerce.geolocation
 FROM
   '/source-data/olist_geolocation_dataset.csv' CSV DELIMITER ',' HEADER;
+COPY ecommerce.order_items
+FROM
+  '/source-data/olist_order_items_dataset.csv' CSV DELIMITER ',' HEADER;
+COPY ecommerce.order_payments
+FROM
+  '/source-data/olist_order_payments_dataset.csv' CSV DELIMITER ',' HEADER;
+COPY products
+FROM
+  '/source-data/olist_products_dataset.csv' CSV DELIMITER ',' HEADER;
+COPY sellers
+FROM
+  '/source-data/olist_sellers_dataset.csv' CSV DELIMITER ',' HEADER;
+COPY product_category_name_translation
+FROM
+  '/source-data/product_category_name_translation.csv' CSV DELIMITER ',' HEADER;

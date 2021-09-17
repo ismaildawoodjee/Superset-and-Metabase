@@ -2,6 +2,19 @@
 
 Useful analysis of [Apache Superset at Dropbox](https://dropbox.tech/application/why-we-chose-apache-superset-as-our-data-exploration-platform).
 
+- [Superset and Metabase Evaluations](#superset-and-metabase-evaluations)
+  - [Supersetup](#supersetup)
+  - [Metabase Setup](#metabase-setup)
+  - [CSV, Excel, and Columnar File Uploads](#csv-excel-and-columnar-file-uploads)
+    - [Superset](#superset)
+    - [Metabase](#metabase)
+  - [Report Scheduling, Logging, and Dashboard Refresh](#report-scheduling-logging-and-dashboard-refresh)
+    - [Superset](#superset-1)
+    - [Metabase](#metabase-1)
+  - [Drilldowns, Custom Visualizations, and Sharing](#drilldowns-custom-visualizations-and-sharing)
+    - [Superset](#superset-2)
+    - [Metabase](#metabase-2)
+
 ## Supersetup
 
 **With Python virtual environment** from scratch: [Installing from scratch](https://superset.apache.org/docs/installation/installing-superset-from-scratch)

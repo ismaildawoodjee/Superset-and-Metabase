@@ -236,7 +236,7 @@ to dashboards can be granted by providing `datasource access` permission to the 
 the Sales Dashboard, the `Public` user must have `datasource access on [examples].[clean_sales_data]` in order
 for them to view the dashboard.
 
-Superset can also be hosted on the cloud, which I tried out [here](https://superset-hdash.herokuapp.com/superset/dashboard/1/?standalone=true), with
+Superset can also be hosted on the cloud, which I tried out [here](https://superset-hdash.herokuapp.com/superset/dashboard/2/?standalone=true), with
 the help of this [article](https://chizurumolorondu.medium.com/setting-up-apache-superset-on-heroku-b547302f600e)
 and this [repo](https://github.com/zi-nt/superset-on-heroku). The functionality is limited, since the Python installation
 of Superset doesn't allow uploads via Excel or Parquet, and the attached Postgres database on Heroku only allows

@@ -1,0 +1,687 @@
+{
+  "dashboards": [
+    {
+      "__Dashboard__": {
+        "css": "",
+        "dashboard_title": "Ecommerce Dashboard",
+        "description": null,
+        "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"remote_id\": 11}",
+        "position_json": "{\"CHART-HO9mjB-afy\":{\"children\":[],\"id\":\"CHART-HO9mjB-afy\",\"meta\":{\"chartId\":131,\"height\":53,\"sliceName\":\"Top 7 States for Customers broken down by City\",\"uuid\":\"251759e6-02a7-4f74-b1a9-fef99e54317d\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-3rDqhr337I\"],\"type\":\"CHART\"},\"CHART-Mt-7q2MGrJ\":{\"children\":[],\"id\":\"CHART-Mt-7q2MGrJ\",\"meta\":{\"chartId\":135,\"height\":50,\"sliceName\":\"Difference in Number of Orders with the past 30 days\",\"uuid\":\"92456c29-2662-450d-8c8d-c60c8c3d0c95\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-W5F-yvffj\"],\"type\":\"CHART\"},\"CHART-bbYRD9hi4x\":{\"children\":[],\"id\":\"CHART-bbYRD9hi4x\",\"meta\":{\"chartId\":137,\"height\":50,\"sliceName\":\"Top 10 Product Categories with the Highest Revenue\",\"uuid\":\"1415bfe8-2a82-472b-9e7e-785970170046\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-Bv24WZqyu\"],\"type\":\"CHART\"},\"CHART-x30LutPJbj\":{\"children\":[],\"id\":\"CHART-x30LutPJbj\",\"meta\":{\"chartId\":133,\"height\":53,\"sliceName\":\"Proportion of Customers by City\",\"uuid\":\"37359c9a-41b2-4d1a-a165-2bcc41dc7b39\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-3rDqhr337I\"],\"type\":\"CHART\"},\"CHART-zXa1oqMKeP\":{\"children\":[],\"id\":\"CHART-zXa1oqMKeP\",\"meta\":{\"chartId\":138,\"height\":50,\"sliceName\":\"Top 10 Most Expensive Product Categories on Average\",\"uuid\":\"a3923807-5a9c-4e8e-994d-919f17c99215\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-Bv24WZqyu\"],\"type\":\"CHART\"},\"CHART-ze8tG_VELF\":{\"children\":[],\"id\":\"CHART-ze8tG_VELF\",\"meta\":{\"chartId\":132,\"height\":53,\"sliceName\":\"Total Number of Customers\",\"uuid\":\"e0874fda-4aa1-4c1e-a73d-cea7aae5db4c\",\"width\":2},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-3rDqhr337I\"],\"type\":\"CHART\"},\"CHART-zrrNUdeggK\":{\"children\":[],\"id\":\"CHART-zrrNUdeggK\",\"meta\":{\"chartId\":134,\"height\":50,\"sliceName\":\"Number of Orders from 2017 to mid-2018\",\"uuid\":\"aa8b3d20-a941-497c-952e-c664647836c1\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-W5F-yvffj\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-3rDqhr337I\",\"ROW-W5F-yvffj\",\"ROW-Bv24WZqyu\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Ecommerce Dashboard\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-3rDqhr337I\":{\"children\":[\"CHART-ze8tG_VELF\",\"CHART-HO9mjB-afy\",\"CHART-x30LutPJbj\"],\"id\":\"ROW-3rDqhr337I\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-Bv24WZqyu\":{\"children\":[\"CHART-bbYRD9hi4x\",\"CHART-zXa1oqMKeP\"],\"id\":\"ROW-Bv24WZqyu\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-W5F-yvffj\":{\"children\":[\"CHART-zrrNUdeggK\",\"CHART-Mt-7q2MGrJ\"],\"id\":\"ROW-W5F-yvffj\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+        "slices": [
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.customers",
+              "datasource_type": "table",
+              "id": 131,
+              "params": "{\"adhoc_filters\": [], \"bar_stacked\": true, \"bottom_margin\": \"auto\", \"color_scheme\": \"SUPERSET_DEFAULT\", \"columns\": [\"customer_city\"], \"contribution\": false, \"datasource\": \"24__table\", \"extra_form_data\": {}, \"groupby\": [\"customer_state\"], \"label_colors\": {}, \"metrics\": [\"count\"], \"order_bars\": false, \"order_desc\": true, \"row_limit\": 10, \"show_bar_value\": false, \"show_controls\": false, \"show_legend\": false, \"slice_id\": 131, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 131, \"datasource_name\": \"customers\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"customer_state\",\"customer_city\"],\"metrics\":[\"count\"],\"annotation_layers\":[],\"row_limit\":10,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Top 7 States for Customers broken down by City",
+              "viz_type": "dist_bar"
+            }
+          },
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.customers",
+              "datasource_type": "table",
+              "id": 132,
+              "params": "{\"adhoc_filters\": [], \"datasource\": \"24__table\", \"extra_form_data\": {}, \"header_font_size\": 0.4, \"header_format_selector\": false, \"header_timestamp_format\": \"%d-%m-%Y %H:%M:%S\", \"metric\": \"count\", \"subheader_font_size\": 0.15, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 132, \"datasource_name\": \"customers\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[\"count\"],\"annotation_layers\":[],\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Total Number of Customers",
+              "viz_type": "big_number_total"
+            }
+          },
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.customers",
+              "datasource_type": "table",
+              "id": 133,
+              "params": "{\"adhoc_filters\": [], \"color_scheme\": \"SUPERSET_DEFAULT\", \"datasource\": \"24__table\", \"date_format\": \"smart_date\", \"donut\": true, \"extra_form_data\": {}, \"groupby\": [\"customer_city\"], \"innerRadius\": 25, \"label_line\": false, \"label_type\": \"key\", \"labels_outside\": false, \"legendOrientation\": \"right\", \"legendType\": \"scroll\", \"metric\": \"count\", \"number_format\": \"SMART_NUMBER\", \"outerRadius\": 75, \"row_limit\": 10, \"show_labels\": true, \"show_labels_threshold\": 5, \"show_legend\": true, \"slice_id\": 133, \"sort_by_metric\": true, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pie\", \"remote_id\": 133, \"datasource_name\": \"customers\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"customer_city\"],\"metrics\":[\"count\"],\"orderby\":[[\"count\",false]],\"annotation_layers\":[],\"row_limit\":10,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Proportion of Customers by City",
+              "viz_type": "pie"
+            }
+          },
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.orders",
+              "datasource_type": "table",
+              "id": 134,
+              "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"SUPERSET_DEFAULT\", \"comparison_type\": \"values\", \"contributionMode\": null, \"datasource\": \"36__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [], \"label_colors\": {}, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"limit\": 0, \"markerEnabled\": false, \"markerSize\": 6, \"metrics\": [\"count\"], \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 1000, \"show_legend\": false, \"show_value\": false, \"stack\": false, \"time_grain_sqla\": \"P1M\", \"time_range\": \"2017-01-01T00:00:00 : 2018-06-30T00:00:00\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"zoomable\": false, \"remote_id\": 134, \"datasource_name\": \"orders\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":36,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"2017-01-01T00:00:00 : 2018-06-30T00:00:00\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1M\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[\"count\"],\"orderby\":[[\"count\",false]],\"annotation_layers\":[],\"row_limit\":1000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"count\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Number of Orders from 2017 to mid-2018",
+              "viz_type": "echarts_timeseries_line"
+            }
+          },
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.orders",
+              "datasource_type": "table",
+              "id": 135,
+              "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"comparison_type\": \"absolute\", \"datasource\": \"36__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [], \"label_colors\": {}, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"limit\": 100, \"markerSize\": 6, \"metrics\": [\"count\"], \"min_periods\": 0, \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"rolling_periods\": 0, \"rolling_type\": null, \"row_limit\": 10000, \"time_compare\": [\"30 days ago\"], \"time_grain_sqla\": \"P1D\", \"time_range\": \"2017-01-01T00:00:00 : 2018-06-01T00:00:00\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 135, \"datasource_name\": \"orders\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":36,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"2017-01-01T00:00:00 : 2018-06-01T00:00:00\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[\"count\"],\"orderby\":[[\"count\",false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":100,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[\"30 days ago\"],\"post_processing\":[{\"operation\":\"compare\",\"options\":{\"source_columns\":[\"count\"],\"compare_columns\":[\"count__30 days ago\"],\"compare_type\":\"absolute\",\"drop_original_columns\":true}},null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"absolute__count__count__30 days ago\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Difference in Number of Orders with the past 30 days",
+              "viz_type": "echarts_timeseries_line"
+            }
+          },
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.order_items, products, product_name_translation joined 09/24/2021 13:37:43",
+              "datasource_type": "table",
+              "id": 137,
+              "params": "{\"adhoc_filters\": [], \"bar_stacked\": false, \"bottom_margin\": 50, \"color_scheme\": \"SUPERSET_DEFAULT\", \"columns\": [], \"datasource\": \"42__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"shipping_limit_date\", \"groupby\": [\"product_category_name_english\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"price\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 877, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INT\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(price)\", \"optionName\": \"metric_voe9ul9qtn8_e9so62ge5en\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 10, \"show_legend\": false, \"slice_id\": 137, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 137, \"datasource_name\": \"order_items, products, product_name_translation joined 09/24/2021 13:37:43\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":42,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"shipping_limit_date\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"product_category_name_english\"],\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"column_name\":\"price\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":877,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"INT\",\"type_generic\":0,\"verbose_name\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":false,\"isNew\":false,\"label\":\"SUM(price)\",\"optionName\":\"metric_voe9ul9qtn8_e9so62ge5en\",\"sqlExpression\":null}],\"annotation_layers\":[],\"row_limit\":10,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Top 10 Product Categories with the Highest Revenue",
+              "viz_type": "dist_bar"
+            }
+          },
+          {
+            "__Slice__": {
+              "cache_timeout": null,
+              "datasource_name": "ecommerce.order_items, products, product_name_translation joined 09/24/2021 13:37:43",
+              "datasource_type": "table",
+              "id": 138,
+              "params": "{\"adhoc_filters\": [], \"bottom_margin\": 50, \"color_scheme\": \"SUPERSET_DEFAULT\", \"columns\": [], \"datasource\": \"42__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"shipping_limit_date\", \"groupby\": [\"product_category_name_english\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"price\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 877, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INT\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"AVG(price)\", \"optionName\": \"metric_0ore2th98zb_cecvfyad43j\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 10, \"show_legend\": false, \"slice_id\": 138, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 138, \"datasource_name\": \"order_items, products, product_name_translation joined 09/24/2021 13:37:43\", \"schema\": \"ecommerce\", \"database_name\": \"postgres-sourcedb1\"}",
+              "query_context": "{\"datasource\":{\"id\":42,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"shipping_limit_date\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"product_category_name_english\"],\"metrics\":[{\"aggregate\":\"AVG\",\"column\":{\"column_name\":\"price\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":877,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"INT\",\"type_generic\":0,\"verbose_name\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":false,\"isNew\":false,\"label\":\"AVG(price)\",\"optionName\":\"metric_0ore2th98zb_cecvfyad43j\",\"sqlExpression\":null}],\"annotation_layers\":[],\"row_limit\":10,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+              "slice_name": "Top 10 Most Expensive Product Categories on Average",
+              "viz_type": "dist_bar"
+            }
+          }
+        ],
+        "slug": null
+      }
+    }
+  ],
+  "datasources": [
+    {
+      "__SqlaTable__": {
+        "cache_timeout": null,
+        "columns": [
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-23T14:12:42"
+              },
+              "column_name": "customer_id",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-23T14:12:42"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 763,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 24,
+              "type": "TEXT",
+              "uuid": "3d079741-ae9f-46b6-b8e9-014d7b169208",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "column_name": "customer_unique_id",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 764,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 24,
+              "type": "TEXT",
+              "uuid": "695d7186-7c6f-43f4-a239-66a6dbd7df3a",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "column_name": "customer_zip_code_prefix",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 765,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 24,
+              "type": "CHAR(5)",
+              "uuid": "b562d5b4-855f-4980-923d-fd1ec2206a59",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "column_name": "customer_city",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 766,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 24,
+              "type": "TEXT",
+              "uuid": "7479c2ed-3f4f-4760-a437-b3948fd62036",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "column_name": "customer_state",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 767,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 24,
+              "type": "CHAR(2)",
+              "uuid": "d94a962a-a7ac-41d7-907c-a8bb7df59bd6",
+              "verbose_name": null
+            }
+          }
+        ],
+        "database_id": 3,
+        "default_endpoint": null,
+        "description": null,
+        "extra": null,
+        "fetch_values_predicate": null,
+        "filter_select_enabled": false,
+        "main_dttm_col": null,
+        "metrics": [
+          {
+            "__SqlMetric__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-23T14:12:43"
+              },
+              "d3format": null,
+              "description": null,
+              "expression": "COUNT(*)",
+              "extra": null,
+              "id": 31,
+              "metric_name": "count",
+              "metric_type": "count",
+              "table_id": 24,
+              "uuid": "35bc4519-3cc6-4ef4-9808-91073c1c4529",
+              "verbose_name": "COUNT(*)",
+              "warning_text": null
+            }
+          }
+        ],
+        "offset": 0,
+        "params": "{\"remote_id\": 24, \"database_name\": \"postgres-sourcedb1\"}",
+        "schema": "ecommerce",
+        "sql": null,
+        "table_name": "customers",
+        "template_params": null
+      }
+    },
+    {
+      "__SqlaTable__": {
+        "cache_timeout": null,
+        "columns": [
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "column_name": "order_id",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 876,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 42,
+              "type": "STRING",
+              "uuid": "d6797958-6e5c-4576-8a87-68fb906aa64d",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "column_name": "price",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 877,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 42,
+              "type": "INT",
+              "uuid": "6d60aea1-017e-4404-b0ec-fe55d84c3eeb",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "column_name": "freight_value",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 878,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 42,
+              "type": "INT",
+              "uuid": "83e44438-575d-441a-be2a-5b2177916e7e",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "column_name": "shipping_limit_date",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 879,
+              "is_active": true,
+              "is_dttm": true,
+              "python_date_format": null,
+              "table_id": 42,
+              "type": "DATETIME",
+              "uuid": "dae30ed2-3e60-4a53-9837-25d4d295f12f",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "column_name": "product_category_name_english",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 880,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 42,
+              "type": "STRING",
+              "uuid": "3a0810a9-d872-4d6d-ae20-9608be8612db",
+              "verbose_name": null
+            }
+          }
+        ],
+        "database_id": 3,
+        "default_endpoint": null,
+        "description": null,
+        "extra": null,
+        "fetch_values_predicate": null,
+        "filter_select_enabled": false,
+        "main_dttm_col": null,
+        "metrics": [
+          {
+            "__SqlMetric__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T05:37:50"
+              },
+              "d3format": null,
+              "description": null,
+              "expression": "count(*)",
+              "extra": null,
+              "id": 49,
+              "metric_name": "count",
+              "metric_type": null,
+              "table_id": 42,
+              "uuid": "de5851f1-e9e5-4c34-9a2e-77b9939bdee7",
+              "verbose_name": null,
+              "warning_text": null
+            }
+          }
+        ],
+        "offset": 0,
+        "params": "{\"remote_id\": 42, \"database_name\": \"postgres-sourcedb1\"}",
+        "schema": "ecommerce",
+        "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\r\n\r\nSELECT \r\n  oi.order_id, \r\n  oi.price :: INT, \r\n  oi.freight_value :: INT, \r\n  oi.shipping_limit_date, \r\n  pc.product_category_name_english\r\nFROM \r\n  ecommerce.order_items oi\r\nLEFT JOIN ecommerce.products p \r\n  ON oi.product_id = p.product_id \r\nLEFT JOIN ecommerce.product_category_name_translation pc \r\n  ON p.product_category_name = pc.product_category_name",
+        "table_name": "order_items, products, product_name_translation joined 09/24/2021 13:37:43",
+        "template_params": null
+      }
+    },
+    {
+      "__SqlaTable__": {
+        "cache_timeout": null,
+        "columns": [
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_id",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 835,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TEXT",
+              "uuid": "04502bb6-d39d-4b1f-94d9-3758c9efa6d6",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "customer_id",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 836,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TEXT",
+              "uuid": "59853d0c-b1bc-413d-993e-b13075f4bf2a",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_status",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 837,
+              "is_active": true,
+              "is_dttm": false,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TEXT",
+              "uuid": "79f9847a-3d5c-441e-a2ce-23d6b6a844b7",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_purchase_timestamp",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 838,
+              "is_active": true,
+              "is_dttm": true,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TIMESTAMP WITHOUT TIME ZONE",
+              "uuid": "06b1e400-2da7-4cb7-a040-2429b399411b",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_approved_at",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 839,
+              "is_active": true,
+              "is_dttm": true,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TIMESTAMP WITHOUT TIME ZONE",
+              "uuid": "03d5d0e7-a13e-48f1-91c2-258a1fabdac6",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_delivered_carrier_date",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 840,
+              "is_active": true,
+              "is_dttm": true,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TIMESTAMP WITHOUT TIME ZONE",
+              "uuid": "9833dcb6-cde0-4647-bafd-b85416afcdf8",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_delivered_customer_date",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 841,
+              "is_active": true,
+              "is_dttm": true,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TIMESTAMP WITHOUT TIME ZONE",
+              "uuid": "2b91e5d8-8daf-4a1e-b3e1-afac83ed85de",
+              "verbose_name": null
+            }
+          },
+          {
+            "__TableColumn__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "column_name": "order_estimated_delivery_date",
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "description": null,
+              "expression": null,
+              "filterable": true,
+              "groupby": true,
+              "id": 842,
+              "is_active": true,
+              "is_dttm": true,
+              "python_date_format": null,
+              "table_id": 36,
+              "type": "TIMESTAMP WITHOUT TIME ZONE",
+              "uuid": "4d58db59-943f-4d3e-8c0e-a76af43e5438",
+              "verbose_name": null
+            }
+          }
+        ],
+        "database_id": 3,
+        "default_endpoint": null,
+        "description": null,
+        "extra": null,
+        "fetch_values_predicate": null,
+        "filter_select_enabled": false,
+        "main_dttm_col": "order_purchase_timestamp",
+        "metrics": [
+          {
+            "__SqlMetric__": {
+              "changed_by_fk": 1,
+              "changed_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "created_by_fk": 1,
+              "created_on": {
+                "__datetime__": "2021-09-24T02:56:08"
+              },
+              "d3format": null,
+              "description": null,
+              "expression": "COUNT(*)",
+              "extra": null,
+              "id": 43,
+              "metric_name": "count",
+              "metric_type": "count",
+              "table_id": 36,
+              "uuid": "8ac33cca-b392-4da2-8037-30e840850329",
+              "verbose_name": "COUNT(*)",
+              "warning_text": null
+            }
+          }
+        ],
+        "offset": 0,
+        "params": "{\"remote_id\": 36, \"database_name\": \"postgres-sourcedb1\"}",
+        "schema": "ecommerce",
+        "sql": null,
+        "table_name": "orders",
+        "template_params": null
+      }
+    }
+  ]
+}

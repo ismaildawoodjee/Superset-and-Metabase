@@ -79,6 +79,15 @@ Connect to database with URI string:
 
     postgresql+psycopg2://superset:superset@db:5432/superset
 
+If connecting to containers from a remote server (e.g. `192.168.1.13`), use the
+IP address of the local server (the server I'm connecting from, e.g. `192.168.1.2`):
+
+    postgresql+psycopg2://sourcedb2:sourcedb2@192.168.1.2:5440/sourcedb2
+
+`sourcedb2` is a Postgres database hosted in a container on `192.168.1.13` and I want to
+connect from `192.168.1.2`. Not sure why plain `localhost` doesn't work, but my hunch is
+that there could be two `localhost`s if I don't differentiate between them.
+
 ## Metabase Setup
 
 Also recommended to run on Linux OS, facing some problems in Windows.

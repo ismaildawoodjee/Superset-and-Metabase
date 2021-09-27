@@ -4,6 +4,8 @@ Useful analysis of [Apache Superset at Dropbox](https://dropbox.tech/application
 
 - [Superset and Metabase Evaluations](#superset-and-metabase-evaluations)
   - [Supersetup](#supersetup)
+    - [Local Superset Installation](#local-superset-installation)
+      - [Configuring Superset](#configuring-superset)
   - [Metabase Setup](#metabase-setup)
   - [CSV, Excel, and Columnar File Uploads](#csv-excel-and-columnar-file-uploads)
     - [Superset](#superset)
@@ -87,6 +89,56 @@ IP address of the local server (the server I'm connecting from, e.g. `192.168.1.
 `sourcedb2` is a Postgres database hosted in a container on `192.168.1.13` and I want to
 connect from `192.168.1.2`. Not sure why plain `localhost` doesn't work, but my hunch is
 that there could be two `localhost`s if I don't differentiate between them.
+
+### Local Superset Installation
+
+[Local Installation](https://superset.apache.org/docs/installation/installing-superset-from-scratch)
+
+Start Superset server with
+
+```bash
+superset run -p 8088 --with-threads --reload --debugger
+```
+
+**Database Connections**: If you install `psycopg2` or its binaries, then PostgreSQL databases can be
+added. Otherwise, there's only SQLite shown on the UI.
+
+**Excel Uploads:** Also have to install `xlrd` to have the option to upload Excel files.
+
+#### Configuring Superset
+
+To configure Superset, create a `superset_config.py` file and put it in the `superset`
+folder next to the `config.py` file.
+For a local installation
+using a Python virtual environment (named `.venv` for example), the `config.py` file is inside the
+`.venv/Lib/site-packages/superset/` folder,
+where the installed Superset library is located.
+
+Then, according to the [docs](https://superset.apache.org/docs/installation/configuring-superset)
+the `superset_config.py` file has to be added to the `PYTHONPATH`.
+
+To add to `PYTHONPATH`, follow some of the answers [here](https://stackoverflow.com/questions/3402168/permanently-add-a-directory-to-pythonpath).
+For Windows 10, Python `v3.9.6`, and with a local installation of Superset, this worked for me:
+
+![Add to PYTHONPATH](assets/images/add_to_pythonpath.png "Add to PYTHONPATH")
+
+For Mac and Linux, adding the following command to `~/.bashrc` will do the trick:
+
+```bash
+export PYTHONPATH="${PYTHONPATH}:/home/username/project/.venv/lib/python3.8/site-packages/superset/superset_config.py"
+```
+
+To see what the `PYTHONPATH` looks like, `echo` it on the terminal. For Windows, the
+`pythonpath.py` script prints it out.
+
+**Size Limit of CSV Uploads:** To set an upper bound on the size limit of CSV uploads,
+(either a row limit or a byte limit), the variables `ROW_LIMIT` and `UPLOAD_MAX_BYTES`
+can be specified as shown in the `superset_config.py` file. For example:
+
+```python
+UPLOAD_MAX_BYTES = 100 * 1024 * 1024
+ROW_LIMIT = 1200000
+```
 
 ## Metabase Setup
 

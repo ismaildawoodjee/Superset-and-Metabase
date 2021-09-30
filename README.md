@@ -54,11 +54,14 @@ Useful analysis of [Apache Superset at Dropbox](https://dropbox.tech/application
 
 3. Run this production version of the `docker-compose` file
 
-        docker-compose -f docker-compose-non-dev.yml up -d
+        docker-compose -f docker-compose-non-dev.yml up
 
     **NOTE:** Although the official instructions at this stage say that you can
     login with username and password `admin` at `localhost:8088`, I could not. This was a
     [past issue](https://github.com/apache/superset/issues/10149) as well.
+    
+    **NOTE:** Running containers in detached mode gives some sort of permission error. Better
+    to run in non-detached mode.
 
 4. To fix this, go inside the `superset_app` container and run the `docker-init.sh` Bash script:
 
@@ -72,7 +75,7 @@ Useful analysis of [Apache Superset at Dropbox](https://dropbox.tech/application
 
     Another way of fixing this is to directly run the Bash script without going inside the container:
 
-        docker exec -i superset_app bash /app/docker/docker-init.sh
+        docker exec superset_app bash /app/docker/docker-init.sh
 
 5. Exit the container and go to `localhost:8088` and login with username and password
    `admin`.
